@@ -1,6 +1,6 @@
 
 Mozilla TTS Install and Setup for this Project
-=========================
+----------
 In order to use this repository, run this code first.
 You should have CUDA installed in your computer and all the GPU drivers must be set.
 
