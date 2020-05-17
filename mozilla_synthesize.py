@@ -151,17 +151,16 @@ model.eval()
 model.decoder.max_decoder_steps = 2000
 speaker_id = 0
 
-sentences = ["Hello"]
+sentences = "Hello"
 script = "According to all known laws of aviation, there is no way a bee should be able to fly."
 
 
-def synthesize(sentences, filename):
-    for sentence in sentences:
-        alizgn, spec, stop_tokens, wav = tts(
-            model, sentence, CONFIG, use_cuda, ap, speaker_id=speaker_id, use_gl=use_gl, figures=True, filename=filename)
+def mozilla_synthesize(sentence, filename):
+    alizgn, spec, stop_tokens, wav = tts(
+        model, sentence, CONFIG, use_cuda, ap, speaker_id=speaker_id, use_gl=use_gl, figures=True, filename=filename)
 
 
-synthesize(sentences, 'test.wav')
+mozilla_synthesize(sentence, 'test.wav')
 # mixer.init()
 # mixer.music.load(OUT_FOLDER+"tempout_0.wav")
 # mixer.music.play()
